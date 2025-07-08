@@ -43,7 +43,7 @@ function clearInput() {
 }
 
 function displayResult(result) {
-    let output = document.getElementById('output');
+    let output = document.getElementById('output'); // Get the output element
     output.innerHTML = result;
     if (result < 0) {
         output.style.color = 'red';

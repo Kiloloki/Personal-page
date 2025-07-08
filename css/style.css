@@ -1,121 +1,120 @@
-/* 引入 Google Fonts */
+/* import Google Fonts */
 /* @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap"); */
 
-/* 页面基础样式 */
+/* basic styling */
 body {
   /* font-family: "Open Sans", sans-serif;  */
-  font-family: "monospace", monospace;
+  font-family: "monospace", monospace;/* to style the world */
   margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #6152b6, #2575fc);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* padding: 0; */
+  min-height: 100vh; /* Ensure the body covers the full viewport height */
+  background: linear-gradient(135deg, #6152b6, #2575fc); /* Gradient background，refer by https://www.w3schools.com/css/css3_gradients.asp */
+  display: flex; /* Enable flexbox layout for vertical alignment */
+  flex-direction: column; 
+  align-items: center; /* Center content horizontally */
   color: #ffffff;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal overflow to avoid the ugly color box appear during moving, refer by https://www.w3schools.com/cssref/css3_pr_overflow-x.php*/
 }
 
 #page_wapper {
     width: 90%;
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 5vh auto; /* Center the page wrapper with auto margins */
 }
 
-/* 页面总容器 */
+/* container style */
 .container {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* Use row direction for desktop view */
   margin: 20px;
-  gap: 20px;
+  gap: 5vw; /* Add space between nav and content */
 }
 
-/* 导航栏样式 */
+/* nav style */
 nav {
-  width: 250px;
+  width: 20vw;
   background-color: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 12px;
-  height: fit-content;
-  position: sticky;
-  top: 20px;
+  padding: 2vw;
+  border-radius: 2vw; /* Rounded corners for the navigation, refer by https://www.w3schools.com/cssref/css3_pr_border-radius.php  */
+  height: fit-content; /* Adjust height to fit content -- Since maybe I plan to develop it further and add more contents here */
+  position: sticky; /* Make the nav sticky */
+  top: 2vm; /* Stick to the top of the viewport */
 }
 
 nav ul {
-  list-style-type: none;
-  padding: 0;
+  list-style-type: none; /* Remove default list styles -- I do not need the bullet point here. Refer by https://www.w3schools.com/cssref/pr_list-style-type.php*/
+  padding: 0;  
   margin: 0;
 }
 
 nav li {
-  margin: 15px 0;
+  margin: 2vh 0;
 }
 
 nav a {
-  text-decoration: none;
+  text-decoration: none; /* Removes the default underline from hyperlinks. Refer by https://www.w3schools.com/css/css_text_decoration.asp*/
   color: #ffffff;
-  font-size: calc(14px + 0.3vw);
-  padding: 8px 12px;
-  display: block;
-  border-radius: 6px;
-  transition: background-color 0.3s;
+  font-size: calc(14px + 0.3vw); /* Responsive font size — slightly larger on bigger screens */
+  padding: 2vh 2vh;
+  display: block; /* Make the link block-level for easier clicking */
+  border-radius: 6px; /* Rounded corners for links and click */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 nav a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* 内容区样式 */
+
 .content {
-  flex: 1;
+  flex: 1; /* Allow content to grow and fill available space */
   background-color: rgba(255, 255, 255, 0.1);
-  padding: 30px;
-  border-radius: 12px;
+  padding: 3vw;
+  border-radius: 2vw;
 }
 
 header {
-  width: 100%;
-  max-width: 1200px;
-  margin: 20px;
+  width: 95%;
+  margin: 2vw;
   background-color: rgba(255, 255, 255, 0.1);
-  padding: 20px 30px;
-  border-radius: 12px;
+  padding: 4vh 3vw;
+  border-radius: 2vw; /* Rounded corners for header */
 }
 
 header h1 {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "monospace", monospace;
   font-size: calc(24px + 0.5vw);
   margin: 0;
 }
 
 header p {
   font-size: calc(14px + 0.3vw);
-  margin: 5px 0 0 0;
+  margin: 5vw 0 0 0;
 }
 
 footer {
-  width: 100%;
-  max-width: 1200px;
-  margin: 20px;
+  width: 95%;
+  margin: 2vw;
   background-color: rgba(255, 255, 255, 0.1);
-  padding: 15px 30px;
-  border-radius: 12px;
-  text-align: center;
+  padding: 4vh 3vw;
+  border-radius: 12vw;
+  text-align: center; /* Center the footer text */
   font-size: calc(12px + 0.2vw);
 }
 
-/* 响应式布局 */
-@media (max-width: 750px) {
+
+@media (max-width: 1200px) {
   .container {
-    max-width: 1200px;
     flex-direction: column;
     align-items: center;
   }
 
   nav {
-    width: 100%;
+    width: 95%;
     position: static;
+    flex-direction: row; 
   }
 
   .content {
@@ -132,51 +131,44 @@ footer {
   }
 }
 
-/* 图片自适应 */
+
 img {
   max-width: 80%;
   height: auto;
 }
 
-ul {
-  padding-left: 20px;
-}
-
-ul li {
-  margin-bottom: 10px;
-}
+/* calculator styles */
 
 #calculator {
-  margin-top: 30px;
-  padding: 20px;
+  margin-top: 5vh;
+  padding: 5vw;
   background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 12px;
+  border-radius: 2vw;
 }
 
 #calculator input {
-  padding: 10px;
-  margin: 10px;
-  border: none;
-  border-radius: 6px;
-  width: 150px;
+  padding: 1vw;
+  margin: 1vh;
+  border: none; /* No border for input fields */
+  border-radius: 60vw;
+  width: 15vw;
 }
 
 #calculator .button-group {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 1vw; /* Space between buttons */
+  margin-top: 2vh; /* Space between input and buttons */
 }
 
 #calculator button {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 6px;
+  padding: 1vh 1vw ;
+  border: none; /* No border for buttons */
+  border-radius: 10vw;
   background-color: #ffffff;
   color: #6a11cb;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  font-weight: bold; /* Bold text for buttons */
+  cursor: pointer; /* Pointer cursor for buttons */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 #calculator button:hover {
@@ -184,7 +176,6 @@ ul li {
 }
 
 #output {
-  margin-top: 20px;
-  font-size: 20px;
-  font-weight: bold;
+  margin-top: 4vh;
+  font-size: 4vw;
 }
